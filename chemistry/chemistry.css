@@ -1,0 +1,112 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.614); /* Box shadow for the table */
+    border-radius: 8px; /* Rounded corners for the table */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.table th, .table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2; /* Light gray background for table header */
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0; /* Light gray background on hover */
+    transition: background-color 0.3s ease;
+}
+tbody tr td a{
+    text-decoration: none;
+    color: cyan;
+}
+tbody tr td{
+    text-decoration: none;
+    color:#000000;
+    font-weight: 400;
+}
+.head {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #3d4348; /* Dark background color in dark mode */
+    color: #fff; /* White text color in dark mode */
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.indicator {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc; /* Light gray toggle button */
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.indicator:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: #fff; /* White circle indicator */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle.active .indicator {
+    background-color: #555; /* Dark gray background color for toggle button in dark mode */
+}
+
+.toggle.active .indicator:before {
+    transform: translateX(25px); /* Move indicator to the right in dark mode */
+}
+footer{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
